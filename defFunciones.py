@@ -21,4 +21,19 @@ def suma():
 def suma2(num1,num2):
     suma = num1 + num2
     return suma
-    
+
+def validar_lista_numeros():
+    while True:
+        try:
+            numeros = input("Ingrese lista de numeros separados con espacio: ").split()
+            # 345 ---> ['345']
+            # 3 4 5 
+            # split--> numeros = ['3','4','5']
+            for i in range(len(numeros)):
+                numeros[i]   = int(numeros[i])
+                #     ||     =   int(numeros[0])
+                #     ||     =  int('3')
+                #numeros[0]  = 3
+            return numeros
+        except ValueError:
+            print("Por favor ingrese números válidos enteros")
