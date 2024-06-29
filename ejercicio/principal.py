@@ -18,6 +18,8 @@ while True:
     elif opcion == 3:
         fn.imprimir_plantilla(trabajadores)
     elif opcion == 4:
+        fn.imprimir_csv(trabajadores)
+        print("CSV creado!!")
         break
     else:
         print("Opción no válida, seleccione nuevamente")
